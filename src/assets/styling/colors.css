@@ -1,0 +1,16 @@
+:root {
+    /* * default ketchup statuses */
+    --color-btn-blue: rgba(59, 129, 198, 1);
+
+    /* * ketchup statuses */
+    --color-btn-disabled: rgb(173, 182, 192);
+    /* * statuses */
+    --color-btn-ok: rgb(221, 255, 221);
+    --color-btn-ok-dark: rgb(76, 175, 80);
+    --color-btn-warning: rgb(222, 54, 42);
+    --color-btn-warning-dark: rgb(222, 54, 42);
+    --color-btn-attention: rgb(255, 254, 204);
+    --color-btn-attention-dark: rgb(255, 235, 59);
+    --color-btn-notification: rgb(221, 255, 255);
+    --color-btn-notification-dark: rgb(32, 150, 243);
+}

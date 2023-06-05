@@ -1,0 +1,75 @@
+/* General -------------------------------------------------- */
+.pb-btn {
+    background-color: var(--color-btn-blue);
+    border-radius: 5px;
+    border: 3px solid var(--color-btn-blue);
+
+    color: white;
+
+    transition: 300ms ease-in-out;
+}
+/* Button State -------------------------------------------------- */
+.btn-isActive,
+.pb-btn.__hover,
+.pb-btn:is(:hover, :focus) {
+    color: var(--color-btn-blue);
+    background-color: rgb(6, 130, 175);
+    background-color: transparent;
+}
+
+.pb-btn:disabled {
+    background-color: var(--color-btn-disabled);
+    border-color: var(--color-btn-disabled);
+}
+
+.pb-btn:disabled:is(:hover, :focus) {
+    background-color: var(--color-btn-disabled);
+    border-color: var(--color-btn-disabled);
+    color: white;
+}
+/* Button Status -------------------------------------------------- */
+.btn-status-ok {
+    background-color: var(--color-btn-ok-dark);
+    border-color: var(--color-btn-ok-dark);
+}
+
+.btn-status-ok:is(:hover, :focus) {
+    color: var(--color-btn-ok);
+}
+.btn-status-warning {
+    background-color: var(--color-btn-warning-dark);
+    border-color: var(--color-btn-warning-dark);
+}
+
+.btn-status-warning:is(:hover, :focus) {
+    color: var(--color-btn-warning);
+}
+.btn-status-attention {
+    background-color: var(--color-btn-attention-dark);
+    border-color: var(--color-btn-attention-dark);
+    color: black;
+}
+
+.btn-status-attention:is(:hover, :focus) {
+    color: black;
+}
+.btn-status-notification {
+    background-color: var(--color-btn-notification-dark);
+    border-color: var(--color-btn-notification-dark);
+}
+
+.btn-status-notification:is(:hover, :focus) {
+    color: var(--color-btn-notification);
+}
+/* Button Size -------------------------------------------------- */
+.pb-btn.sm {
+    padding: .375rem .75rem;
+}
+
+.pb-btn.md {
+    padding: .5rem 1rem;
+}
+
+.pb-btn.lg {
+    padding: .75rem 1.5rem;
+}
