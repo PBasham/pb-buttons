@@ -66,7 +66,7 @@ const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
     else if (btnStatus === "warning") buttonCssClass = "btn-status-warning"
     else if (btnStatus === "attention") buttonCssClass = "btn-status-attention"
     else if (btnStatus === "notification") buttonCssClass = "btn-status-notification"
-    console.log("Css: ", buttonCssClass)
+    
     return (
 
         <button
