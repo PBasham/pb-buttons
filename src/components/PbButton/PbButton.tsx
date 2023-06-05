@@ -7,7 +7,7 @@ import "../../assets/styling/colors.css"
 import "../../assets/styling/pbButton.css"
 
 interface PbButtonProps {
-    /** Text that will display on button. */
+    /** Text that will display on button. Leave as empty string for no text.*/
     label?: string,
     /** Pass inline styling here, this will override any classes that are used. */
     customeStyles?: object
@@ -36,7 +36,7 @@ interface PbButtonProps {
 
 const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
     const {
-        label = "",
+        label = "Press me",
         size = "md",
         customeStyles,
         additionalClasses = "",
@@ -66,7 +66,7 @@ const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
     else if (btnStatus === "warning") buttonCssClass = "btn-status-warning"
     else if (btnStatus === "attention") buttonCssClass = "btn-status-attention"
     else if (btnStatus === "notification") buttonCssClass = "btn-status-notification"
-    
+
     return (
 
         <button
