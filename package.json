@@ -65,6 +65,7 @@
         "prop-types": "^15.8.1",
         "rollup": "^3.23.1",
         "rollup-plugin-dts": "^5.3.0",
+        "rollup-plugin-postcss": "^4.0.2",
         "storybook": "^7.0.18",
         "tslib": "^2.5.3",
         "webpack": "^5.85.0"

@@ -3,8 +3,8 @@
 ========================================*/
 import React, { FC } from 'react'
 // styling --------------------------------------------------
-// import "../../assets/styling/colors.css"
-// import "../../assets/styling/pbButton.css"
+import "../../assets/styling/colors.css"
+import "../../assets/styling/pbButton.css"
 
 interface PbButtonProps {
     /** Text that will display on button. */
