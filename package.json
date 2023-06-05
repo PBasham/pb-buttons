@@ -1,6 +1,6 @@
 {
-    "name": "@PBasham/pb-buttons",
-    "version": "0.0.1",
+    "name": "@pbasham/pb-buttons",
+    "version": "0.0.2",
     "description": "React button componenet library.",
     "author": "Patrick Tyler Basham",
     "private": false,
