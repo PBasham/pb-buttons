@@ -1,5 +1,5 @@
 {
-    "name": "pb-buttons",
+    "name": "@PBasham/pb-buttons",
     "version": "0.0.1",
     "description": "React button componenet library.",
     "author": "Patrick Tyler Basham",
@@ -74,5 +74,8 @@
     "files": [
         "dist"
     ],
-    "types": "dist/index.d.ts"
+    "types": "dist/index.d.ts",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/PBasham"
+    }
 }
