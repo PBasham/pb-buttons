@@ -2,6 +2,7 @@
 import { Meta, StoryFn } from "@storybook/react"
 import { within, userEvent } from "@storybook/testing-library"
 import { size } from "lodash"
+import React from "react"
 import { PbButton } from "../components"
 // component --------------------------------------------------
 
