@@ -7,13 +7,9 @@ import "../../assets/styling/colors.css"
 import "../../assets/styling/pbButton.css"
 
 interface PbButtonProps {
-    /**
-     * Text that will display on button.
-     */
+    /** Text that will display on button. */
     label?: string,
-    /**
-     * Pass inline styling here, this will override any classes that are used.
-     */
+    /** Pass inline styling here, this will override any classes that are used. */
     customeStyles?: object
     /** If you want to overwrite any set classes, these are the class names.
      * 
@@ -30,15 +26,11 @@ interface PbButtonProps {
     additionalClasses?: string
     /** This addes padding based off of size chooses. */
     size?: "sm" | "md" | "lg"
-    /**
-     * Boolean if the button is disabled or not.
-     */
+    /** Boolean if the button is disabled or not. */
     disabled?: boolean
-    /** 
-     * This will added classes to change the color of the button to a preset color scheme.
-     */
+    /** This will added classes to change the color of the button to a preset color scheme. */
     btnStatus?: "ok" | "warning" | "attention" | "notification" | ""
-
+    /** Function for onClick() */
     onClick?: (() => void) | ((e: any) => void)
 }
 
@@ -52,7 +44,7 @@ const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
 
         btnStatus,
 
-        onClick,
+        onClick = () => console.log("I've been clicked!"),
     } = props
 
     // * Default button Background Color: "rgba(59, 129, 198, 1)"
