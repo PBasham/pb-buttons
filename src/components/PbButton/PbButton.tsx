@@ -6,7 +6,7 @@ import React, { FC } from 'react'
 import "../../assets/styling/colors.css"
 import "../../assets/styling/pbButton.css"
 
-interface PbButtonProps {
+export interface PbButtonProps {
     /** Text that will display on button. Leave as empty string for no text.*/
     label?: string,
     /** Pass inline styling here, this will override any classes that are used. */
