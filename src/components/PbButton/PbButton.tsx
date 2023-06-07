@@ -31,7 +31,7 @@ export interface PbButtonProps {
     /** This will added classes to change the color of the button to a preset color scheme. */
     btnStatus?: "ok" | "warning" | "attention" | "notification" | ""
     /** Basic radius states. Default is 'rounded' */
-    borderRadius?: "squared" | "rounded"
+    borderRadius?: "rounded" | "squared"
     /** Function for onClick() */
     onClick?: (() => void) | ((e: any) => void)
 }
@@ -68,7 +68,9 @@ const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
     else if (btnStatus === "warning") btnStatusClass = "btn-status-warning"
     else if (btnStatus === "attention") btnStatusClass = "btn-status-attention"
     else if (btnStatus === "notification") btnStatusClass = "btn-status-notification"
-    let btnBorderRadiusClass: string = borderRadius === "rounded" ? "btn-radius-rnd" : "btn-radius-sqr"
+    let btnBorderRadiusClass: string
+    if (borderRadius === "rounded") btnBorderRadiusClass = "btn-radius-rnd"
+    else btnBorderRadiusClass = "btn-radius-sqr"
 
     
     return (
