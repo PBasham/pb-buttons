@@ -8,7 +8,16 @@ import { size } from "lodash"
 import { PbButton } from "../components"
 import { PbButtonProps } from "../components/PbButton/PbButton"
 
-
+const defaultParams: PbButtonProps = {
+    label: "Press me",
+    size: "md",
+    btnStatus: "",
+    borderRadius: "rounded",
+    disabled: false,
+    additionalClasses: "",
+    customeStyles: {},
+    onClick: () => {console.log("Button has been pressed!")}
+}
 
 export default {
     title: "React Button Components/PbButton",
@@ -37,6 +46,11 @@ export default {
                         + notification  
             `,
         },
+        borderRadius: {
+            name: "borderRadius",
+            defaultValue: "rounded",
+            description: "Sets class for border radius. 'squared' .btn-radius-sqr | 'rounded' .btn-radius-rnd"
+        },
         disabled: {
             name: "disabled",
             defaultValue: false,
@@ -52,7 +66,7 @@ export default {
             defaultValue: {},
             description: "",
         },
-        onClick: { action: "Button has been clicked" }
+        onClick: { action: defaultParams.onClick }
 
     },
 } as Meta<typeof PbButton>
@@ -61,66 +75,75 @@ const Template: StoryFn<PbButtonProps> = (args) => <PbButton {...args} />
 // * standard --------------------------------------------------
 export const Standard: StoryFn = Template.bind({})
 Standard.args = {
-    label: "Press me",
-    size: "md",
-    disabled: false
+    ...defaultParams
+}
+// * borderRadius --------------------------------------------------
+export const RoundCorners: StoryFn = Template.bind({});
+RoundCorners.args = {
+    ...defaultParams,
+    borderRadius: "rounded"
+}
+export const SquareCorners: StoryFn = Template.bind({});
+SquareCorners.args = {
+    ...defaultParams,
+    borderRadius: "square"
 }
 // * btnStatus --------------------------------------------------
 export const OkStatus: StoryFn = Template.bind({});
 OkStatus.args = {
-    label: "Press me",
-    size: "md",
-    btnStatus: "ok",
-    disabled: false,
+    ...defaultParams,
+    btnStatus: "ok"
 }
 export const WarningStatus: StoryFn = Template.bind({});
 WarningStatus.args = {
-    label: "Press me",
-    size: "md",
-    btnStatus: "warning",
-    disabled: false,
+    ...defaultParams,
+    btnStatus: "warning"
 }
 export const AttentionStatus: StoryFn = Template.bind({});
 AttentionStatus.args = {
-    label: "Press me",
-    size: "md",
-    btnStatus: "attention",
-    disabled: false,
+    ...defaultParams,
+    btnStatus: "attention"
 }
 export const NotificationStatus: StoryFn = Template.bind({});
 NotificationStatus.args = {
-    label: "Press me",
-    size: "md",
-    btnStatus: "notification",
-    disabled: false,
+    ...defaultParams,
+    btnStatus: "notification"
 }
 // * size --------------------------------------------------
 export const SizeSm: StoryFn = Template.bind({});
 SizeSm.args = {
-    label: "Press me",
-    size: "sm",
-    btnStatus: "",
-    disabled: false,
+    ...defaultParams,
+    size: "sm"
 }
 export const SizeMd: StoryFn = Template.bind({});
 SizeMd.args = {
-    label: "Press me",
-    size: "md",
-    btnStatus: "",
-    disabled: false,
+    ...defaultParams,
+    size: "md"
 }
 export const SizeLg: StoryFn = Template.bind({});
 SizeLg.args = {
-    label: "Press me",
-    size: "lg",
-    btnStatus: "",
-    disabled: false,
+    ...defaultParams,
+    size: "lg"
 }
 // * disabled --------------------------------------------------
 export const Disabled: StoryFn = Template.bind({});
 Disabled.args = {
-    label: "Press me",
-    size: "md",
-    btnStatus: "",
-    disabled: true,
+    ...defaultParams,
+    disabled: true
+}
+// * misc --------------------------------------------------
+export const LongLable: StoryFn = Template.bind({});
+LongLable.args = {
+    ...defaultParams,
+    label: "This is a test for a really long label, I mean, a really really long label, it's gonna just go on and on and on..."
+}
+export const NoLabel: StoryFn = Template.bind({});
+NoLabel.args = {
+    ...defaultParams,
+    label: ""
+}
+export const Hovered: StoryFn = Template.bind({});
+Hovered.args = {
+    ...defaultParams,
+    additionalClasses: "btn-isActive"
 }

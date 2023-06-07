@@ -30,6 +30,8 @@ export interface PbButtonProps {
     disabled?: boolean
     /** This will added classes to change the color of the button to a preset color scheme. */
     btnStatus?: "ok" | "warning" | "attention" | "notification" | ""
+    /** Basic radius states. Default is 'rounded' */
+    borderRadius?: "squared" | "rounded"
     /** Function for onClick() */
     onClick?: (() => void) | ((e: any) => void)
 }
@@ -43,6 +45,7 @@ const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
         disabled = false,
 
         btnStatus,
+        borderRadius = "rounded",
 
         onClick = () => console.log("I've been clicked!"),
     } = props
@@ -60,19 +63,20 @@ const PbButton: FC<PbButtonProps> = (props: PbButtonProps) => {
     // * Color-status-notification: "rgb(221, 255, 255)"
     // * Color-status-notification-dark: "rgb(32, 150, 243)"
 
-    let buttonCssClass = ""
+    let btnStatusClass: string = ""
+    if (btnStatus === "ok") btnStatusClass = "btn-status-ok"
+    else if (btnStatus === "warning") btnStatusClass = "btn-status-warning"
+    else if (btnStatus === "attention") btnStatusClass = "btn-status-attention"
+    else if (btnStatus === "notification") btnStatusClass = "btn-status-notification"
+    let btnBorderRadiusClass: string = borderRadius === "rounded" ? "btn-radius-rnd" : "btn-radius-sqr"
 
-    if (btnStatus === "ok") buttonCssClass = "btn-status-ok"
-    else if (btnStatus === "warning") buttonCssClass = "btn-status-warning"
-    else if (btnStatus === "attention") buttonCssClass = "btn-status-attention"
-    else if (btnStatus === "notification") buttonCssClass = "btn-status-notification"
-
+    
     return (
 
         <button
             onClick={onClick}
             type="button"
-            className={`pb-btn ${size} ${buttonCssClass} ${additionalClasses}`}
+            className={`pb-btn ${size} ${btnStatusClass} ${btnBorderRadiusClass} ${additionalClasses}`}
             style={{ ...customeStyles }}
             disabled={disabled}
         >
