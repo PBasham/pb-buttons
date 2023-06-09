@@ -1,6 +1,6 @@
 {
   "name": "@pbasham/pb-buttons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React button componenet library.",
   "scripts": {
     "rollup": "rollup -c",

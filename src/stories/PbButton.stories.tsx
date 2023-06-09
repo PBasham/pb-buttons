@@ -10,9 +10,9 @@ import { PbButtonProps } from "../components/PbButton/PbButton"
 
 const defaultParams: PbButtonProps = {
     label: "Press me",
-    size: "md",
-    btnStatus: "",
-    borderRadius: "rounded",
+    size: undefined,
+    btnStatus: undefined,
+    borderRadius: undefined,
     disabled: false,
     additionalClasses: "",
     customeStyles: {},
@@ -142,8 +142,52 @@ NoLabel.args = {
     ...defaultParams,
     label: ""
 }
+// * state --------------------------------------------------
 export const Hovered: StoryFn = Template.bind({});
-Hovered.args = {
+const HoveredArgs: PbButtonProps = {
     ...defaultParams,
     additionalClasses: "btn-isActive"
+}
+Hovered.args = {
+    ...HoveredArgs
+}
+
+export const HoveredOkStatus: StoryFn = Template.bind({});
+const HoveredOkStatusArgs: PbButtonProps = {
+    ...defaultParams,
+    additionalClasses: "btn-isActive",
+    btnStatus: "ok" 
+}
+HoveredOkStatus.args = {
+    ...HoveredOkStatusArgs,
+}
+
+export const HoveredWarningStatus: StoryFn = Template.bind({});
+const HoveredWarningStatusArgs: PbButtonProps = {
+    ...defaultParams,
+    additionalClasses: "btn-isActive",
+    btnStatus: "warning" 
+}
+HoveredWarningStatus.args = {
+    ...HoveredWarningStatusArgs,
+}
+
+export const HoveredAttentionStatus: StoryFn = Template.bind({});
+const HoveredAttentionStatusArgs: PbButtonProps = {
+    ...defaultParams,
+    additionalClasses: "btn-isActive",
+    btnStatus: "attention" 
+}
+HoveredAttentionStatus.args = {
+    ...HoveredAttentionStatusArgs,
+}
+
+export const HoveredNotificationStatus: StoryFn = Template.bind({});
+const HoveredNotificationStatusArgs: PbButtonProps = {
+    ...defaultParams,
+    additionalClasses: "btn-isActive",
+    btnStatus: "notification" 
+}
+HoveredNotificationStatus.args = {
+    ...HoveredNotificationStatusArgs,
 }

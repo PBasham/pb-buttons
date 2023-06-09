@@ -11,7 +11,6 @@
 
 /* Button State -------------------------------------------------- */
 .btn-isActive,
-.pb-btn.__hover,
 .pb-btn:is(:hover, :focus) {
     color: var(--color-btn-blue);
     background-color: rgb(6, 130, 175);
@@ -35,8 +34,9 @@
     border-color: var(--color-btn-ok-dark);
 }
 
-.pb-btn.btn-status-ok:is(:hover, :focus) {
-    color: var(--color-btn-ok);
+.pb-btn.btn-status-ok:is(:hover, :focus,.btn-isActive) {
+    color: var(--color-btn-ok-dark);
+    background-color: transparent;
 }
 
 .pb-btn.btn-status-warning {
@@ -44,8 +44,9 @@
     border-color: var(--color-btn-warning-dark);
 }
 
-.pb-btn.btn-status-warning:is(:hover, :focus) {
-    color: var(--color-btn-warning);
+.pb-btn.btn-status-warning:is(:hover, :focus, .btn-isActive) {
+    color: var(--color-btn-warning-dark);
+    background-color: transparent;
 }
 
 .pb-btn.btn-status-attention {
@@ -54,8 +55,9 @@
     color: black;
 }
 
-.pb-btn.btn-status-attention:is(:hover, :focus) {
+.pb-btn.btn-status-attention:is(:hover, :focus, .btn-isActive) {
     color: black;
+    background-color: transparent;
 }
 
 .pb-btn.btn-status-notification {
@@ -63,8 +65,9 @@
     border-color: var(--color-btn-notification-dark);
 }
 
-.pb-btn.btn-status-notification:is(:hover, :focus) {
-    color: var(--color-btn-notification);
+.pb-btn.btn-status-notification:is(:hover, :focus, .btn-isActive) {
+    color: var(--color-btn-notification-dark);
+    background-color: transparent;
 }
 
 /* Button Size -------------------------------------------------- */
